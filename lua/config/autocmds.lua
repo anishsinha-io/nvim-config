@@ -19,6 +19,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+vim.cmd("nnoremap <leader>fc <CMD>Legendary<CR>")
+
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   pattern = { "*.go" },
 --   command = "!goimports % > %",

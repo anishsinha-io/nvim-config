@@ -1,18 +1,6 @@
 local M = {
   {
-    require("lspconfig").cssls.setup({
-      settings = {
-        css = { validate = true, lint = {
-          unknownAtRules = "ignore",
-        } },
-        scss = { validate = true, lint = {
-          unknownAtRules = "ignore",
-        } },
-        less = { validate = true, lint = {
-          unknownAtRules = "ignore",
-        } },
-      },
-    }),
+    -- require("lspconfig").cssls.setup({}),
   },
   {
     "neovim/nvim-lspconfig",
@@ -20,6 +8,20 @@ local M = {
       servers = {
         tailwindcss = {
           filetypes_exclude = { "markdown" },
+        },
+
+        cssls = {
+          settings = {
+            css = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+            scss = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+            less = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+          },
         },
       },
 
