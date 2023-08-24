@@ -18,3 +18,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
   end,
 })
+
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.go" },
+--   command = "!goimports % > %",
+-- })

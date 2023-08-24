@@ -3,10 +3,10 @@ local M = {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      transparent = true,
+      -- transparent = true,
       styles = {
-        sidebars = "transparent",
-        floats = "transparent",
+        -- sidebars = "transparent",
+        -- floats = "transparent",
       },
     },
   },
@@ -20,7 +20,7 @@ local M = {
     lazy = false,
     name = "catppuccin",
     opts = {
-      transparent_background = true,
+      -- transparent_background = true,
       flavour = "macchiato", -- latte, frappe, macchiato, mocha
       background = { -- :h background
         light = "latte",
@@ -63,7 +63,7 @@ local M = {
     config = function()
       require("github-theme").setup({
         options = {
-          transparent = true,
+          -- transparent = true,
         }, -- ...
       })
     end,
@@ -72,7 +72,7 @@ local M = {
     "tiagovla/tokyodark.nvim",
     -- lazy = false,
     opts = {
-      transparent_background = true, -- set background to transparent
+      -- transparent_background = true, -- set background to transparent
       gamma = 1.00, -- adjust the brightness of the theme
       styles = {
         comments = { italic = true }, -- style for comments
@@ -98,16 +98,44 @@ local M = {
     "Mofiqul/dracula.nvim",
     lazy = false,
     opts = {
-      transparent_bg = true,
+      -- transparent_bg = true,
       italic_comment = true,
     },
   },
+  -- {
+  --   "VDuchauffour/neodark.nvim",
+  --   lazy = false,
+  --   opts = {
+  --     theme_style = "neodarker",
+  --     transparent_bg = true,
+  --   },
+  -- },
   {
-    "VDuchauffour/neodark.nvim",
+    "rebelot/kanagawa.nvim",
     lazy = false,
     opts = {
-      theme_style = "neodarker",
-      transparent_bg = true,
+      -- compile = false, -- enable compiling the colorscheme
+      -- undercurl = true, -- enable undercurls
+      -- commentStyle = { italic = true },
+      -- functionStyle = {},
+      -- keywordStyle = { italic = true },
+      -- statementStyle = { bold = true },
+      -- typeStyle = {},
+      -- transparent = false, -- do not set background color
+      -- dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+      -- terminalColors = true, -- define vim.g.terminal_color_{0,17}
+      -- colors = { -- add/modify theme and palette colors
+      --   palette = {},
+      --   theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+      -- },
+      -- overrides = function(colors) -- add/modify highlights
+      --   return {}
+      -- end,
+      -- theme = "wave", -- Load "wave" theme when 'background' option is not set
+      -- background = { -- map the value of 'background' option to a theme
+      --   dark = "wave", -- try "dragon" !
+      --   light = "lotus",
+      -- },
     },
   },
 }
