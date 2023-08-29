@@ -1,23 +1,3 @@
--- local command_center = require("FeiyouG/command_center.nvim")
--- local telescope = require("telescope")
--- local noremap = { noremap = true }
---
--- command_center.add({
---   {
---     desc = "Open command_center",
---     cmd = "<CMD>Telescope command_center<CR>",
---     keys = {
---       { "n", "<Leader>fc", noremap },
---       { "v", "<Leader>fc", noremap },
---
---       -- If ever hesitate when using telescope start with <leader>f,
---       -- also open command center
---       { "n", "<Leader>f", noremap },
---       { "v", "<Leader>f", noremap },
---     },
---   },
--- }, command_center.mode.REGISTER_ONLY)
-
 local M = {
   {
     "mrjones2014/legendary.nvim",
@@ -27,6 +7,19 @@ local M = {
     lazy = false,
     -- sqlite is only needed if you want to use frecency sorting
     -- dependencies = { 'kkharji/sqlite.lua' }
+    opts = {
+      select_prompt = "Command Palette",
+      icons = {
+        -- keymap items list the modes in which the keymap applies
+        -- by default, you can show an icon instead by setting this to
+        -- a non-nil icon
+        -- keymap = nil,
+        keymap = nil,
+        command = "",
+        fn = "󰡱",
+        itemgroup = "",
+      },
+    },
   },
   {
     "folke/flash.nvim",
@@ -50,10 +43,5 @@ local M = {
     },
   },
 }
-
--- in a plugin spec:
-
--- where you set up legendary.nvim
--- now the keymaps from the `flash.nvim` plugin spec will be automatically loaded
 
 return M
